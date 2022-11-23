@@ -1,7 +1,7 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Analysis on Incarceration in the U.S."
+author: "Maya Shukla"
+date: '2022-11-21'
 output: html_document
 ---
 
@@ -11,35 +11,31 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
+My main question when looking at this data set and reading more about mass incarceration in the United States is how disproportionately are black men arrested in comparison to white men. 
 
 ## Introduction 
-[TODO]
+During Ronald Reagan's presidency, he instated a new policy on drug related policing. He coined it "The War on Drugs." Unfortunately, this did not have the outcome he desired. It increased incarceration rates immensely and disproportionately targeted neighborhoods of minorities and people of color. By passing legislation to arrest people for minor possessions and consumption of drugs mainly present in minority neighborhoods, the population of people of color in jails increased exponentially. Due to an increasing prison population and increase in police activity, police brutality is also on the rise as they are first responders for all calls and have weapons that can inflict a lot of damage. Police brutality has also increased exponentially due to inherent biases and racism. Minority populations and people of color live in fear and  act extremely wary around police officials, even though police are supposed to protect. With an excess of funding and support, law enforcement is still being excessively rough and violent to people of color, mainly black individuals. In my report, I will be comparing the prison population of black and white men in the 1970s and today. This will show the drastic effect that the War on Drugs had. 
 
 ## Data Summary 
-[TODO]
 
-[TODO ... other sections ... See Canvas for details]
 
-_All the very best with your work!_
+
+## Chart showing the Increase in Jail Population in the U.S. from 1970-2018.
+
+```{r chart 1, echo=FALSE}
+plot_jail_pop_for_us()
+```
+
+This chart's purpose is to visualize how jail populations have increase since 1970. After the War on Drugs began, jail populations increased exponentially. Over the years more and more people were sentenced to jail. At the same time, people were already in jail serving long sentences for minor crimes. Stricter policing has lead to an increase in jail populations. 
+
+## Chart showing the jail population trends between states from 1970-2018.
+
+```{r chart 2, echo=FALSE}
+plot_jail_pop_by_states()
+```
+
+This chart's purpose is to provide a visual tool to compare and contrast how different states' jail populations vary between the years of 1970 and 2018. It is interesting to compare states that may have higher minority populations, since their prison populations may be higher due to systematic policing of minorities. There also may be higher prison populations in conservative states due to an inherent bias against minority populations. With this chart it is easy to compare jail populations between different states.
+
+## 
+
 
