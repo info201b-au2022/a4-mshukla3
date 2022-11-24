@@ -1,5 +1,5 @@
 ---
-title: "Analysis on Incarceration in the U.S."
+title: "Analysis on Jail Populations in the U.S."
 author: "Maya Shukla"
 date: '2022-11-21'
 output: html_document
@@ -18,6 +18,55 @@ During Ronald Reagan's presidency, he instated a new policy on drug related poli
 
 ## Data Summary 
 
+```{r max_black, echo = FALSE}
+
+max_black <- summary_list$max_black_pop
+
+```
+
+```{r year_max_black, echo = FALSE}
+
+year_max_black <- summary_list$year_max_black_pop
+
+```
+
+```{r white_max_black, echo = FALSE}
+
+white_max_black <- summary_list$white_pop_2000
+
+```
+
+```{r max_white, echo = FALSE}
+
+max_white <- summary_list$max_white_pop
+
+```
+
+```{r year_max_white, echo = FALSE}
+
+year_max_white <- summary_list$year_max_white_pop
+
+```
+
+```{r black_max_white, echo = FALSE}
+
+black_max_white <- summary_list$black_pop_2010
+
+```
+
+```{r max_diff, echo = FALSE}
+
+max_diff <- summary_list$max_difference
+
+```
+
+```{r year_diff, echo = FALSE}
+
+year_diff <- summary_list$year_max_diff
+
+```
+
+In `r year_max_black` there was an average of `r max_black` black male inmates in the U.S. jail system, the highest average number between 1970 and 2018. In the same year there were `r white_max_black` white male inmates. The difference is very large and shows the disproportionate amount of black men arrested as opposed to white men. In `r year_max_white` there was an average of `r max_white` white male inmates, the highest average between 1970 and 2018. In that year, there were `r black_max_white` male black inmates. Even at the _highest average white male_ jail population, _average black male jail population_ is **still** higher. In `r year_diff` the difference between male white and black inmates was `r max_diff`. The difference between black and white inmates is almost the same amount as the amount of white inmates that year. That shows that in `r year_diff` a black man is **two times** more likely to end up in jail compared to a white man. Every single year from 1970 and 2018 shows that there is a higher average of black men in jail compared to white men in jail. This highlights the disproportionate policing in black versus white neighborhoods. By looking at the difference between black and white male jail populations, we are able to see a pattern of inequality between black and white men. 
 
 
 ## Chart showing the Increase in Jail Population in the U.S. from 1970-2018.
@@ -30,12 +79,26 @@ This chart's purpose is to visualize how jail populations have increase since 19
 
 ## Chart showing the jail population trends between states from 1970-2018.
 
+
 ```{r chart 2, echo=FALSE}
+states <- c("CO", "WA", "OR", "AZ")
 plot_jail_pop_by_states()
 ```
 
 This chart's purpose is to provide a visual tool to compare and contrast how different states' jail populations vary between the years of 1970 and 2018. It is interesting to compare states that may have higher minority populations, since their prison populations may be higher due to systematic policing of minorities. There also may be higher prison populations in conservative states due to an inherent bias against minority populations. With this chart it is easy to compare jail populations between different states.
 
-## 
+## Chart showing the difference between Black and White Jail Population. 
 
+```{r chart 3, echo=FALSE}
+p
+```
 
+This chart shows disproportionate jailing between Black men and White men. The highest average black man jail population was in 2000 at 326.94. The highest average white man jail population was in 2010 at 275.6. This chart shows a pattern of inequality because in each year displayed on the chart, black jail population is always higher than white jail population. Even the highest white population was lower than the black population in the same year. 
+
+## Chart showing the difference between jail populations in each state.
+
+```{r chart 4, echo=FALSE}
+map_graph
+```
+
+This chart shows the jail populations between states in 2008. It is analyzing 2008 since that was the year with the highest jail population. The states with the highest jail populations are California, Texas, and Florida. These are also the three most populous states in the US. All three states also have a high population of people of color. The next state that has a high jail population is Georgia, which has a high black population. These are indicators that there is disproportionate jailing of people of color in the United States. 
