@@ -81,8 +81,7 @@ This chart's purpose is to visualize how jail populations have increase since 19
 
 
 ```{r chart 2, echo=FALSE}
-states <- c("CO", "WA", "OR", "AZ")
-plot_jail_pop_by_states()
+plot_jail_pop_by_states(c("CO", "WA", "OR", "AZ"))
 ```
 
 This chart's purpose is to provide a visual tool to compare and contrast how different states' jail populations vary between the years of 1970 and 2018. It is interesting to compare states that may have higher minority populations, since their prison populations may be higher due to systematic policing of minorities. There also may be higher prison populations in conservative states due to an inherent bias against minority populations. With this chart it is easy to compare jail populations between different states.

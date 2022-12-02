@@ -143,7 +143,7 @@ plot_jail_pop_by_states <- function(states) {
                                                   y = "Total Jail Population")
   return(state_line_plot)
 }
-
+plot_jail_pop_by_states(c("CA", "WA"))
 
 #----------------------------------------------------------------------------#
 
